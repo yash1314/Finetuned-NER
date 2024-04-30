@@ -8,7 +8,7 @@ def output_processing(data):
 
     combined_data = {}
     for item in data:
-        entity_group = item['entity_group']
+        entity_group = item['entity']
         word = item['word']
         full_entity_group = entity_group_mapping.get(entity_group, entity_group)
         if full_entity_group in combined_data:
