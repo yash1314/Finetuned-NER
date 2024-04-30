@@ -5,7 +5,7 @@ import numpy as np
 from utils import output_processing
 from transformers import pipeline
 
-@st.cache_resource(allow_output_mutation=True)
+@st.cache_resource
 def get_model():
     # tokenizer = AutoTokenizer.from_pretrained("Yash907/db-finetuned-NER")
     # model = AutoModelForSequenceClassification.from_pretrained("Yash907/db-finetuned-NER")
