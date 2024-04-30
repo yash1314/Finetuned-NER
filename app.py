@@ -28,11 +28,9 @@ button = st.button('Analyze')
 
 if input_text and button:
     
-    # tokenized_input = tokenizer([input_text], padding=True, truncation=True, max_length=512,return_tensors='pt')
-    
     output = model(input_text)
-    st.write(output)
-    # final_output = output_processing(output)
-    # for key, value in final_output.items():
+
+    final_output = output_processing(output)
+    for key, value in final_output.items():
          
-    #     st.success(f"{key} : {value}")    
+        st.write(f"{key} : {value}")    
