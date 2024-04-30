@@ -33,4 +33,4 @@ if input_text and button:
     else: 
         final_output = output_processing(output)
         for key, value in final_output.items():
-            st.success(f"{key} : {value}")    
+            st.success(f"**{key}** : {value}")    
