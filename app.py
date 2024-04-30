@@ -29,8 +29,8 @@ if input_text and button:
     tokenized_input = tokenizer([input_text], padding=True, truncation=True, max_length=512,return_tensors='pt')
     
     output = model(**tokenized_input)
-
-    final_output = output_processing(output)
-    for key, value in final_output.items():
+    st.write(output)
+    # final_output = output_processing(output)
+    # for key, value in final_output.items():
          
-        st.success(f"{key} : {value}")    
+    #     st.success(f"{key} : {value}")    
