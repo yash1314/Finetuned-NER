@@ -1,10 +1,9 @@
 
 def output_processing(data):
-   entity_group_mapping = {
+    entity_group_mapping = {
     "B-PER": "Person",
     "B-LOC": "Location",
-    "B-ORG": "Organization"
-}
+    "B-ORG": "Organization"}
 
     combined_data = {}
     for item in data:
