@@ -1,9 +1,9 @@
 
 def output_processing(data):
-    entity_group_mapping = {
-    "PER": "Person",
-    "LOC": "Location",
-    "ORG": "Orangization"
+   entity_group_mapping = {
+    "B-PER": "Person",
+    "B-LOC": "Location",
+    "B-ORG": "Organization"
 }
 
     combined_data = {}

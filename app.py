@@ -1,6 +1,5 @@
 import streamlit as st
 import torch
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import numpy as np
 from utils import output_processing
 from transformers import pipeline
@@ -32,5 +31,4 @@ if input_text and button:
 
     final_output = output_processing(output)
     for key, value in final_output.items():
-         
-        st.write(f"{key} : {value}")    
+        st.sucess(f"{key} : {value}")    
