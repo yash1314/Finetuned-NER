@@ -3,6 +3,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import numpy as np
 from utils import output_processing
+from transformers import pipeline
 
 @st.cache(allow_output_mutation=True)
 def get_model():
