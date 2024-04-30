@@ -17,7 +17,7 @@ st.title(':rainbow[Fine-Tuned Named Entity Recognition]')
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_html=True)
 
 st.markdown("""This webapp can detect entities in your input sentence. The model used
-here is fine-tuned on custom dataset [link](https://huggingface.co/datasets/conll2003) for detecting toxicity.""", 
+here is fine-tuned on custom dataset [link](https://huggingface.co/datasets/conll2003) for detecting entities.""", 
 unsafe_allow_html=True)
 
 input_text = st.text_area(label = ' ', placeholder = 'Enter your text here', max_chars = 512, 
@@ -26,9 +26,11 @@ button = st.button('Analyze')
 
 
 if input_text and button:
-    
-    output = model(input_text)
-
-    final_output = output_processing(output)
-    for key, value in final_output.items():
-        st.success(f"{key} : {value}")    
+    try :    
+        output = model(input_text)
+    except Exception as e:
+        pass
+    else: 
+        final_output = output_processing(output)
+        for key, value in final_output.items():
+            st.success(f"{key} : {value}")    
