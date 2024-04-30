@@ -1,5 +1,5 @@
 
-def output_processing(output):
+def output_processing(data):
     entity_group_mapping = {
     "PER": "Person",
     "LOC": "Location",
