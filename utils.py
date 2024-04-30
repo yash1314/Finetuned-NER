@@ -6,7 +6,9 @@ def output_processing(data):
     "B-LOC": "Location",
     "I-LOC": "Location",
     "B-ORG": "Organization", 
-    "I-ORG": "Organization"}
+    "I-ORG": "Organization".
+    "B-MISC": "Miscellaneous",
+    "I-MISC": "Miscellaneous"}
 
     combined_data = {}
     for item in data:
