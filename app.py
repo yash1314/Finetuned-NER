@@ -6,11 +6,12 @@ from utils import output_processing
 
 @st.cache(allow_output_mutation=True)
 def get_model():
-    tokenizer = AutoTokenizer.from_pretrained("Yash907/db-finetuned-NER")
-    model = AutoModelForSequenceClassification.from_pretrained("Yash907/db-finetuned-NER")
-    return tokenizer,model
+    # tokenizer = AutoTokenizer.from_pretrained("Yash907/db-finetuned-NER")
+    # model = AutoModelForSequenceClassification.from_pretrained("Yash907/db-finetuned-NER")
+    pipe = pipeline("token-classification", model="Yash907/db-finetuned-NER")
+    return pipe
 
-tokenizer, model = get_model()
+model = get_model()
 
 st.title(':rainbow[Fine-Tuned Named Entity Recognition]')
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_html=True)
@@ -26,9 +27,9 @@ button = st.button('Analyze')
 
 if input_text and button:
     
-    tokenized_input = tokenizer([input_text], padding=True, truncation=True, max_length=512,return_tensors='pt')
+    # tokenized_input = tokenizer([input_text], padding=True, truncation=True, max_length=512,return_tensors='pt')
     
-    output = model(**tokenized_input)
+    output = model(input_text)
     st.write(output)
     # final_output = output_processing(output)
     # for key, value in final_output.items():
