@@ -20,6 +20,10 @@ st.markdown("""This webapp can detect entities in your input sentence. The model
 here is fine-tuned on custom dataset [link](https://huggingface.co/datasets/conll2003) for detecting entities.""", 
 unsafe_allow_html=True)
 
+st.markdown("""Example text for test: John Smith, CEO of ABC Company, visited NYC last week for an AI conference. 
+He met Google reps and discussed collaborations at Hilton Hotel, Manhattan. The event covered machine learning, NLP, and 
+was productive for John.""")
+
 input_text = st.text_area(label = ' ', placeholder = 'Enter your text here', max_chars = 512, 
                      label_visibility = "collapsed")
 button = st.button('Analyze')
@@ -30,6 +34,7 @@ if input_text and button:
         output = model(input_text)
         final_output = output_processing(output)
     except Exception as e:
+        raise e as 
         st.warning("improper text for NER task. Please proper text with entities such as: Names, locations, companies, etc")
     else: 
         # final_output = output_processing(output)
