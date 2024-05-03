@@ -26,11 +26,11 @@ button = st.button('Analyze')
 
 
 if input_text and button:
-    # try :    
-    #     output = model(input_text)
-    # except Exception as e:
-    #     pass
-    # else: 
-    final_output = output_processing(output)
-    for key, value in final_output.items():
-        st.success(f"**{key}** : {value}")    
+    try :    
+        output = model(input_text)
+    except Exception as e:
+        st.warning("improper text for NER task. Please proper text with entities such as: Names, locations, companies, etc")
+    else: 
+        final_output = output_processing(output)
+        for key, value in final_output.items():
+            st.success(f"**{key}** : {value}")    
