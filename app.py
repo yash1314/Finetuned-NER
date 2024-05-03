@@ -34,7 +34,7 @@ if input_text and button:
         output = model(input_text)
         final_output = output_processing(output)
     except Exception as e:
-        raise e as 
+        raise e 
         st.warning("improper text for NER task. Please proper text with entities such as: Names, locations, companies, etc")
     else: 
         # final_output = output_processing(output)
