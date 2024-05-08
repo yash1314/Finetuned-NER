@@ -13,7 +13,7 @@ def get_model():
 
 model = get_model()
 
-st.title(':blue[Fine-Tuned Named Entity Recognition]', divider='rainbow')
+st.header(':blue[Fine-Tuned Named Entity Recognition]', divider='rainbow')
 st.markdown('<style>div.block-container{padding-top:2rem;}</style>', unsafe_allow_html=True)
 
 st.markdown("""This webapp can detect entities in your input sentence. The model used
