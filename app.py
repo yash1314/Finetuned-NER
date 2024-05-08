@@ -13,8 +13,8 @@ def get_model():
 
 model = get_model()
 
-st.title(':rainbow[Fine-Tuned Named Entity Recognition]')
-st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_html=True)
+st.title(':blue[Fine-Tuned Named Entity Recognition]', divider='rainbow')
+st.markdown('<style>div.block-container{padding-top:2rem;}</style>', unsafe_allow_html=True)
 
 st.markdown("""This webapp can detect entities in your input sentence. The model used
 here is fine-tuned on custom dataset [link](https://huggingface.co/datasets/conll2003) for detecting entities.""", 
